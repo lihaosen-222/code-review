@@ -11,6 +11,7 @@ export interface Discussion {
 }
 
 interface Note {
+  id: number
   body: string
   type: string
   position: Position

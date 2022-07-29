@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import { getLineId, isShowNewThread } from './uitls'
 import { ProForm, ProFormTextArea } from '@ant-design/pro-components'
@@ -43,14 +42,14 @@ export default function getWidgets({
   Object.values(paths).forEach((line) => {
     const { oldLine, newLine, positionType: type, lineThreads } = line
 
-    const lineRender = lineThreads?.map((thread) => {
+    const lineRender = lineThreads?.map((thread, index) => {
       return (
-        <ul className="thread">
+        <ul className="thread" key={index}>
           {thread?.map((note) => {
-            const { body, created_at: createdAt, author } = note
+            const { body, created_at: createdAt, author, id } = note
             const { username, avatar_url: avatarUrl } = author
             return (
-              <li className="comment">
+              <li className="comment" key={id}>
                 <img src={avatarUrl} className="avatar" alt="头像" />
                 <span className="username">{username}</span>
                 <span className="createTime">

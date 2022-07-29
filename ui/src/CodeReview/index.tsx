@@ -65,7 +65,7 @@ export default (props: CodeReiewProps) => {
                 {(fileHunks: any[]) => {
                   const noContent = !fileHunks?.length
                   return noContent ? <EmptyHunk/> : fileHunks.map((hunk) =>
-                    [<Hunk hunk={hunk} gutterEvents={gutterEvents} />])
+                    [<Hunk key={hunk.content} hunk={hunk} gutterEvents={gutterEvents} />])
                 }}
               </Diff>
             )
