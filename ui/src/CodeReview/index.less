@@ -1,55 +1,61 @@
-
 .file {
   margin-bottom: 20px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
   border-radius: 5px 5px 0 0;
 
-  :global{
+  :global {
     .title {
       margin: 0;
       padding: 10px;
       background-color: #fafafa;
       border-bottom: 1px solid #e5e5e5;
     }
+
+    .empty-hunk {
+      background-color: #fff;
+    }
   }
 }
 
-.discussion{
+.discussion {
   padding-left: 108px;
   background-color: #fafafa;
   border-bottom: #e5e5e5 1px solid;
   border-top: #e5e5e5 1px solid;
-  :global{
+  :global {
     ul {
       margin: 0;
     }
 
-    .thread{
+    .thread {
       border-left: #e5e5e5 1px solid;
       border-right: #e5e5e5 1px solid;
       background-color: #fff;
     }
 
-    .thread:nth-of-type( n+2){
+    .thread:nth-of-type(n + 2) {
       border-top: #f0f0f0 1px solid;
     }
 
-    .replyForm{
+    .replyForm {
       display: flex;
       padding: 8px 20px;
+      .ant-form-item {
+        flex: 1;
+      }
     }
 
-    .antd-form-item {
+    .ant-form-item {
       margin: 0 !important;
     }
 
-    .antd-row {
+    .ant-row {
       flex: 1;
       padding: 0 10px 0 0;
     }
 
-    .comment{
+    .comment {
       padding: 8px 30px;
       border-bottom: #f0f0f0 1px solid;
     }
@@ -57,23 +63,22 @@
       width: 30px;
       border-radius: 15px;
     }
-    .username{
+    .username {
       padding-left: 5px;
     }
-    .createTime{
+    .createTime {
       padding-left: 5px;
       font-size: 12px;
       text-align: right;
       color: #707070;
     }
-    .body{
+    .body {
       padding-top: 5px;
     }
   }
 }
 
-
-.newThread{
+.newThread {
   border-top: #e5e5e5 1px solid;
   border-bottom: #e5e5e5 1px solid;
   :global {
@@ -84,12 +89,12 @@
       border-left: #e5e5e5 1px solid;
     }
 
-    .antd-space{
+    .ant-space {
       flex-direction: row-reverse;
       display: flex;
       padding-bottom: 8px;
     }
-    .antd-row{
+    .ant-row {
       margin: 0;
     }
   }

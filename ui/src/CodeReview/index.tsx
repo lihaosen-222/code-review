@@ -81,7 +81,7 @@ export default (props: CodeReiewProps) => {
 
 function EmptyHunk() {
   return (
-    <tbody>
+    <tbody className='empty-hunk'>
       <tr>
         <td colSpan={3}>
           <Empty />

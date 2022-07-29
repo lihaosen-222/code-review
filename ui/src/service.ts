@@ -24,7 +24,7 @@ export async function addNoteToExistingThread (data: any){
 
 export async function mergeAMergeRequest (data: any){
   return request('/api/mergeAMergeRequest', {
-    method: 'put',
+    method: 'post',
     data
   })
 }

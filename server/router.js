@@ -710,7 +710,7 @@ function routerInit(app) {
       data: 'sucess',
     }
   })
-  router.put('/api/mergeAMergeRequest', async (ctx) => {
+  router.all('/api/mergeAMergeRequest', async (ctx) => {
     ctx.body = {
       subCode: 0,
       msg: 'success',
@@ -719,8 +719,8 @@ function routerInit(app) {
       data: 'sucess',
     }
   })
-
   app.use(router.routes()).use(router.allowedMethods())
+
 }
 
 module.exports = routerInit
