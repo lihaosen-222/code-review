@@ -35,8 +35,8 @@ interface Position {
 export interface CodeReiewProps {
   changes: Change[];
   discussions: Discussion[];
-  onComment: (params: any) => void;
-  onReply: (params: any) => void;
+  onComment: (params: any) => Promise<any>
+  onReply: (params: any) => Promise<any>;
 }
 
 export interface NewThread {
@@ -63,8 +63,8 @@ export interface GetWidgetsProps {
   oldPath: string
   newPath: string
   threads: Threads
-  onReply: () => Promise<any>
-  onComment: () => Promise<any>
+  onReply: (params: any) => Promise<any>
+  onComment: (params: any) => Promise<any>
 }
 
 
